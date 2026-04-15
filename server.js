@@ -9,7 +9,7 @@ app.use(express.json());
 
 // 1. KẾT NỐI MONGODB ATLAS
 // LƯU Ý: Thay chuỗi dưới đây bằng chuỗi bạn vừa Copy ở Bước 1 (nhớ điền đúng mật khẩu)
-const mongoURI = 'mongodb+srv://vhieu:<db_password>@database.4ezmvs9.mongodb.net/?appName=database';
+const mongoURI = 'mongodb+srv://vhieu:123456Pt@@database.4ezmvs9.mongodb.net/?appName=database';
 
 mongoose.connect(mongoURI, {
     useNewUrlParser: true,
