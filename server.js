@@ -11,11 +11,10 @@ app.use(express.json());
 // LƯU Ý: Thay chuỗi dưới đây bằng chuỗi bạn vừa Copy ở Bước 1 (nhớ điền đúng mật khẩu)
 const mongoURI = 'mongodb+srv://vhieu:123456Pt%40@database.4ezmvs9.mongodb.net/?appName=database';
 
-mongoose.connect(mongoURI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-}).then(() => console.log('✅ Đã kết nối thành công với MongoDB Atlas!'))
-  .catch(err => console.error('❌ Lỗi kết nối MongoDB:', err));
+// Thay đổi đoạn mongoose.connect cũ thành đoạn ngắn gọn này:
+mongoose.connect(mongoURI)
+    .then(() => console.log('✅ Đã kết nối thành công với MongoDB Atlas!'))
+    .catch(err => console.error('❌ Lỗi kết nối MongoDB:', err));
 
 // 2. TẠO "KHUÔN MẪU" DỮ LIỆU (SCHEMA) CHO NGƯỜI DÙNG
 const userSchema = new mongoose.Schema({
